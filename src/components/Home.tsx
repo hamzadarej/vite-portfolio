@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div
       id="tab_0"
-      className="w-full h-full mb-[20px] mt-[75px] overflow-hidden"
+      className="w-full h-screen mb-[20px] mt-[60px] lg:mt-0 lg:items-center lg:flex overflow-hidden"
     >
       <section className="py-[60px] poppins-medium px-[12px]">
         <h4 className="text-[22px] lg:text-[40px] tracking-tight fade-text whitespace-nowrap">
@@ -13,10 +13,10 @@ const Home = () => {
           <span>I </span>
           <span>AM </span>
           <span>A </span>
-          <span>SOFTWARE </span>
+          <span>DEVELOPER </span>
         </h4>
 
-        <ul className="dynamic-texts [&>li>span]:relative text-[40px] tracking-[-1px] h-[56px] leading-[56px] overflow-hidden poppins-semibold">
+        <ul className="dynamic-texts text-[40px] [&>li>span]:relative tracking-[-1px] h-[56px] leading-[56px] overflow-hidden poppins-semibold">
           <li>
             <span>Frontend</span>
           </li>

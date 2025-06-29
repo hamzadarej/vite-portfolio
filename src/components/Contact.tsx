@@ -5,12 +5,16 @@ import { PiEnvelopeOpenLight } from "react-icons/pi";
 import { SlLocationPin } from "react-icons/sl";
 import { PiFacebookLogoLight } from "react-icons/pi";
 import { PiLinkedinLogoLight } from "react-icons/pi";
-
+import { useForm, ValidationError } from "@formspree/react";
 import { PiGithubLogoLight } from "react-icons/pi";
 import WaveBox from "../Layout/WaveBox";
 import { ReactNode } from "react";
+import { cn } from "../utility/cn";
+import { FieldValues, SubmissionError } from "@formspree/core";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xleavopp");
+
   return (
     <div className="px-[12px] h-full poppins-medium w-full">
       <ChapterHeadline chapter={6} />
@@ -21,7 +25,7 @@ const Contact = () => {
         more="Contact Me"
       />
       <div className="my-[24px] space-y-[24px]">
-        <IconWithDesc desc="+49 156468486">
+        <IconWithDesc desc="+49 176 60387683">
           <FiPhoneCall />
         </IconWithDesc>
         <IconWithDesc desc="darejhamza@gmail.com">
@@ -45,19 +49,50 @@ const Contact = () => {
           </span>
         ))}
       </div>
-      <div>
-        <h2 className="text-[28px] poppins-semibold pb-10 realative">
+      <form onSubmit={handleSubmit}>
+        <h2 className="text-[28px] poppins-semibold  realative">
           Leave a Message
         </h2>
-        <Input label="Name" placeholder="Your name" />
-        <Input label="Email" placeholder="Your e-mail" />
-        <Input label="Message" placeholder="Your message" />
-        <div className="flex items-center my-14 justify-center border rounded-full relative h-[148px] w-[148px]">
+
+        <div className="text-center my-5 text-green-700">
+          {state.succeeded && (
+            <>
+              Many thanks for your message — I’ll be in touch with you shortly!
+            </>
+          )}
+        </div>
+        <Input
+          name="name"
+          label="Name"
+          placeholder="Your name"
+          errors={state.errors}
+        />
+        <Input
+          name="email"
+          label="Email"
+          placeholder="Your e-mail"
+          errors={state.errors}
+        />
+        <Input
+          name="message"
+          label="Message"
+          placeholder="Your message"
+          errors={state.errors}
+        />
+
+        <div className="flex items-center my-14 ml-10 mb-10 justify-center border rounded-full relative h-[148px] w-[148px]">
           <WaveBox extraClass="waveRunTwo">
-            <button className="text-[24px]">Submit</button>
+            <button
+              className={cn("text-[24px]", {
+                "text-gray-500": state.submitting,
+              })}
+              type="submit"
+            >
+              {state.submitting ? "submitting" : "Submit"}
+            </button>
           </WaveBox>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
@@ -82,15 +117,32 @@ const IconWithDesc = ({
 const Input = ({
   label,
   placeholder,
+  name,
+  errors,
 }: {
   label: string;
   placeholder: string;
+  name: string;
+  errors?: SubmissionError<FieldValues> | null;
 }) => {
   return (
-    <section className="flex flex-col gap-5 mb-5 pb-2 border-b">
-      <label className="poppins-medium text-[20px]">{label}</label>
-      <input className="outline-none" placeholder={placeholder} />
-    </section>
+    <div className="mb-5">
+      <section className="flex flex-col gap-5 pb-2 border-b">
+        <label className="poppins-medium text-[20px]">{label}</label>
+        <input
+          className="outline-none"
+          name={name}
+          placeholder={placeholder}
+          required
+        />
+      </section>
+      <ValidationError
+        prefix="Input"
+        field={name}
+        errors={errors ?? null}
+        style={{ color: "red" }}
+      />
+    </div>
   );
 };
 
