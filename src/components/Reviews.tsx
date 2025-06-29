@@ -45,27 +45,27 @@ const Reviews = () => {
 const reviewList = [
   {
     img: "",
-    name: "Stanly",
+    name: "St***",
     position: "Customer orientation",
     review:
       "Weiß um die Anforderungen des WebApp Projekts, vor allem in Hinblick auf den Fertigstellungsdruck durch Stakeholder und der Wichtigkeit der Akzeptanz Kriterien in Hinblick zum nativem Vorbild der App.",
   },
   {
     img: "",
-    name: "Annett",
+    name: "An***",
     position: "Customer orientation",
     review:
       "Du hast eine sehr gute und tiefgreifende Kenntnis unseres Projektes und kannst dort auch größere Aufgaben selbstständig umsetzen. Du kennst in unserem Flugprojekt alle relevanten Details, um auch in Zusammenarbeit mit PM neue Features zu besprechen und dort auch Hinweise und Verbesserungsvorschläge einzubringen.",
   },
   {
     img: "",
-    name: "Stanly",
+    name: "St***",
     position: "Professional competence",
     review: "Solide Kenntnisse in JS/React",
   },
   {
     img: "",
-    name: "Annett",
+    name: "An***",
     position: "Professional competence",
     review:
       "Du erweiterst ständig Dein Fachwissen und erlangst im Projekt auch immer tiefgreifenderes Verständnis. Auch mit neuen Technologien bzw. Technologie-Updates kommst du gut zurecht bzw. kannst dich schnell einarbeiten (z.B. Remix, Update auf React 18, TypeScript). \n" +
@@ -73,14 +73,14 @@ const reviewList = [
   },
   {
     img: "",
-    name: "Stanly",
+    name: "St***",
     position: "Excellence in Execution",
     review:
       "Sein Wissen in React ermöglicht ihm schnelles und effizientes Fertigstellen von komplexen Features (Gallerie, Rating Overlays)",
   },
   {
     img: "",
-    name: "Annett",
+    name: "An***",
     position: "Excellence in Execution",
     review:
       "Im Flugprojekt kennst Du Dich sehr gut aus und kannst dort auch mit allen relevanten Details umgehen.",
@@ -88,13 +88,13 @@ const reviewList = [
 
   {
     img: "",
-    name: "Stanly",
+    name: "St***",
     position: "Result orientation",
     review: "Arbeitet an vielen Themen => hoher Ticketumsatz.",
   },
   {
     img: "",
-    name: "Annett",
+    name: "An***",
     position: "Result orientation",
     review:
       'Du hast Spaß daran, immer möglichst viel "Output" zu liefern und somit das Team zügig voran zu bringen bzw. schnell Ergebnisse zu liefern.',
@@ -102,14 +102,14 @@ const reviewList = [
   //Goal-oriented communication and cooperation
   {
     img: "",
-    name: "Stanly",
+    name: "St***",
     position: "Goal-oriented communication and cooperation",
     review:
       "Gibt sehr gute Ratschläge in Code Reviews und hinterfragt auch Lösungsansätze von anderen Entwicklern",
   },
   {
     img: "",
-    name: "Annett",
+    name: "An***",
     position: "Goal-oriented communication and cooperation",
     review:
       "Du arbeitest stets zielstrebig, freundlich und proaktiv mit allen Kollegen zusammen. \n" +

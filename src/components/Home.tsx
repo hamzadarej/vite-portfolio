@@ -1,4 +1,5 @@
 import WaveBox from "../Layout/WaveBox";
+import homeImg from "../../public/home.png";
 
 const Home = () => {
   return (
@@ -43,7 +44,7 @@ const Home = () => {
         <div className="self-center relative w-fit mb-[30px]">
           <WaveBox extraClass="waveRunFour">
             <img
-              src={"../public/home.png"}
+              src={homeImg}
               className="size-[350px] rounded-full border-2"
               alt="logo"
             />
