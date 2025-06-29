@@ -5,7 +5,6 @@ import { PiEnvelopeOpenLight } from "react-icons/pi";
 import { SlLocationPin } from "react-icons/sl";
 import { PiFacebookLogoLight } from "react-icons/pi";
 import { PiLinkedinLogoLight } from "react-icons/pi";
-import { RiArrowRightDoubleLine } from "react-icons/ri";
 
 import { PiGithubLogoLight } from "react-icons/pi";
 import WaveBox from "../Layout/WaveBox";
