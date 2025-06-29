@@ -24,13 +24,13 @@ const AboutMe = () => {
           design ideas into interactive, high-performance websites and web
           applications using modern tools and technologies like HTML, CSS,
           JavaScript, React, and Tailwind CSS.
-          <p>
+          <span>
             I focus on writing clean, maintainable code and building
             user-centered experiences that work seamlessly across devices and
             browsers. With a strong eye for detail and a love for UI/UX, I enjoy
             collaborating with designers and backend developers to bring
             projects to life.
-          </p>
+          </span>
         </p>
         <section className="sm:flex block flex-row-reverse justify-around space-y-6">
           <div className="flex flex-wrap sm:flex-col flex-row text-[20px] space-x-2 [&>span]:grow-1 sm:[&>span]:shrink-0 space-y-2">

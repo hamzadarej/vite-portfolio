@@ -25,7 +25,10 @@ const Service = () => {
         <div className="h-[410px] w-full border">
           <ul className=" text-[18px] flex flex-col justify-between h-full p-6">
             {serviceList.map((service) => (
-              <li className="shrink-0 flex items-center space-x-2">
+              <li
+                key={service}
+                className="shrink-0 flex items-center space-x-2"
+              >
                 <RiArrowRightDoubleLine />
                 <span key={service}>{service}</span>
               </li>
