@@ -35,9 +35,12 @@ const Home = () => {
           <button className="bg-black rounded-3xl py-[10px] text-white px-[14px]">
             View My Work
           </button>
-          <button className="border-black border rounded-3xl py-[10px] text-black px-[16px]">
+          <a
+            href={"#tab_6"}
+            className="border-black border rounded-3xl py-[10px] text-black px-[16px]"
+          >
             Contact Me
-          </button>
+          </a>
         </div>
       </section>
       <section className="w-full items-center flex justify-center px-[12px]">
