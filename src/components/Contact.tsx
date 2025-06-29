@@ -80,7 +80,7 @@ const Contact = () => {
           errors={state.errors}
         />
 
-        <div className="flex items-center my-14 ml-10 mb-10 justify-center border rounded-full relative h-[148px] w-[148px]">
+        <div className="flex items-center my-14 mb-10 justify-center border rounded-full relative h-[148px] w-[148px]">
           <WaveBox extraClass="waveRunTwo">
             <button
               className={cn("text-[24px]", {
