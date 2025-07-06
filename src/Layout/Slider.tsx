@@ -63,7 +63,7 @@ const SimpleSlider: FC<{ children: ReactNode }> = ({ children }) => {
   };
 
   return (
-    <div className="[&_.slick-dots]:!flex [&_.slick-arrow]:!flex [&_.slick-dots]:-bottom-[50px] [&_.slick-dots]:left-[20px] [&_.slick-dots>li]:h-[3px] [&_.slick-dots]:w-[calc(100%-200px)]  [&_.slick-dots>li]:min-w-[calc(100%/10)]  [&_.slick-dots>li]:bg-[#00000066] [&_.slick-dots]:items-center [&_.slick-dots]:absolute">
+    <div className="[&_.slick-dots>.slick-active]:bg-[#212529] [&_.slick-prev]:right-[90px] [&_.slick-arrow]:absolute [&_.slick-arrow]:bottom-[-70px] [&_.slick-arrow]:right-[20px] [&_.slick-dots>li>button]:hidden [&_.slick-dots>.slick-active]:h-[5px] [&_.slick-dots]:!flex [&_.slick-arrow]:!flex [&_.slick-dots]:-bottom-[50px] [&_.slick-dots]:left-[20px] [&_.slick-dots>li]:h-[3px] [&_.slick-dots]:w-[calc(100%-200px)]  [&_.slick-dots>li]:min-w-[calc(100%/10)]  [&_.slick-dots>li]:bg-[#00000066] [&_.slick-dots]:items-center [&_.slick-dots]:absolute">
       <Slider {...settings}>{children}</Slider>
     </div>
   );

@@ -40,7 +40,7 @@ function App() {
   return (
     <div
       className={cn(
-        "2xl:px-20 overflow-y-scroll relative no-scrollbar h-full bg-[#ffda67] text-[#000000] flex flex-col justify-start items-start",
+        "2xl:px-20 overflow-y-scroll relative no-scrollbar h-full bg-dandelion-yellow text-black flex flex-col justify-start items-start",
         {
           "w-[calc(100vw-380px)]": isDesktop,
         },
@@ -53,8 +53,8 @@ function App() {
           currentPage={currentPage}
         />
       ) : (
-        <div className="flex py-[14px] px-[12px] items-center gap-[14px] text-[22px]">
-          <span className="font-bold text-[30px]">H&D</span>
+        <div className="flex py-3.5 px-3 items-center gap-3.5 text-[22px]">
+          <span className="font-bold text-3xl">H&D</span>
           <span className="poppins-semibold">Frontend Fusion</span>
         </div>
       )}
@@ -65,7 +65,6 @@ function App() {
           onChange={(inView) => {
             if (inView) {
               setCurrentPage(index);
-              //window.location.hash = "tab_" + index;
             }
           }}
           id={`content-${index}`}
@@ -82,10 +81,10 @@ function App() {
       <div
         onClick={() => setShowNavList(false)}
         className={cn(
-          "fixed inset-0 w-full h-full transition-transform duration-1000 ease-in-out bg-[#00000080]",
+          "fixed inset-0 w-full h-full transition-transform duration-1000 ease-in-out bg-black/25",
         )}
         style={{
-          transform: showNavList ? "translateX(0%)" : "translateX(100%)",
+          transform: showNavList ? "translateX(0)" : "translateX(100%)",
         }}
       />
     </div>

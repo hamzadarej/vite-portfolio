@@ -81,16 +81,16 @@ const Contact = () => {
         />
 
         <div className="flex items-center my-14 mb-10 justify-center border rounded-full relative h-[148px] w-[148px]">
-          <WaveBox extraClass="waveRunTwo">
-            <button
-              className={cn("text-[24px]", {
-                "text-gray-500": state.submitting,
-              })}
-              type="submit"
-            >
+          <button
+            className={cn("text-[24px]", {
+              "text-gray-500": state.submitting,
+            })}
+            type="submit"
+          >
+            <WaveBox extraClass="waveRunTwo">
               {state.submitting ? "submitting" : "Submit"}
-            </button>
-          </WaveBox>
+            </WaveBox>
+          </button>
         </div>
       </form>
     </div>

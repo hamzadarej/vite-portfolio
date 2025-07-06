@@ -116,19 +116,17 @@ export const NavList = ({
   return (
     <div
       className={cn(
-        " p-[20px] fixed h-full bg-[#ffda67] w-[280px] overflow-x-scroll no-scrollbar transition-transform duration-1000",
+        "p-5 fixed h-full bg-dandelion-yellow w-28 overflow-x-scroll no-scrollbar transition-transform duration-1000",
         {
           "inset-0": !isDesktop,
           "right-0 h-fit bottom-0 top-0 my-auto": isDesktop,
         },
       )}
       style={{
-        transform: !showNavList ? "translateX(-100%)" : "translateX(0%)",
+        transform: !showNavList ? "translateX(-100%)" : "translateX(0)",
       }}
     >
-      {/*<img src={"../public/logo.webp"} className="size-[50px]" alt="logo" />*/}
-
-      <ul className="mt-[24px] poppins-medium h-full border-l-2 border-black/50 text-[16px]  gap-[8px] flex flex-col">
+      <ul className="mt-6 poppins-medium h-full border-l-2 border-black/50 text-[16px]  gap-2 flex flex-col">
         {list.map((item, index) => (
           <li
             onClick={() => {
@@ -136,14 +134,11 @@ export const NavList = ({
               onClick?.();
             }}
             key={item}
-            className={cn(
-              "w-[240px] -ml-[2px] h-[42px] z-9 flex items-center pl-[34px] ",
-              {
-                "border-l-2 border-l-[#000] relative overflow-hidden":
-                  currentPage === index,
-                "hover:bg-black/15": currentPage !== index,
-              },
-            )}
+            className={cn("w-24 -ml-[2px] h-11 z-9 flex items-center pl-8", {
+              "border-l-2 border-l-black relative overflow-hidden":
+                currentPage === index,
+              "hover:bg-black/15": currentPage !== index,
+            })}
           >
             <a href={"#tab_" + index}>{item}</a>
             {currentPage === index && (
@@ -151,7 +146,7 @@ export const NavList = ({
             )}
           </li>
         ))}
-        <li className="flex flex-col pl-[34px] py-[20px]">
+        <li className="flex flex-col pl-8 py-5">
           <span>darejhamza@gmail.com</span>
           <span>+49 1756474664</span>
         </li>
