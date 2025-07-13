@@ -4,25 +4,25 @@
 :root {
   font-family: Poppi,Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --text: balck;
-  --background: #ffda67;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-user-select: none;
 }
 
+[data-theme="dark"] {
+  --background: #ffda67;
+}
+
 [data-theme="light"] {
   --background: #f7f7f7;
 }
 
-html, body, .root {
-  background-color: var(--background);
-}
+
 @theme {
   --spacing-28: 280px ;
   --spacing-24: 240px ;
 --animate-fade: fadeRight 0.5s ease-out;
-  --background: var(--background);
 
   @keyframes fadeRight {
     0% {
