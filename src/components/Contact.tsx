@@ -25,28 +25,45 @@ const Contact = () => {
         more="Contact Me"
       />
       <div className="my-[24px] space-y-[24px]">
-        <IconWithDesc desc="+49 176 60387683">
+        <IconWithDesc desc="+49 176 60387683" href="tel:+4917660387683">
           <FiPhoneCall />
         </IconWithDesc>
-        <IconWithDesc desc="darejhamza@gmail.com">
+        <IconWithDesc
+          desc="darejhamza@gmail.com"
+          href="mailto:darejhamza@gmail.com"
+        >
           <PiEnvelopeOpenLight />
         </IconWithDesc>
-        <IconWithDesc desc="Seeburgstrasse 50 04103, Leipzig germany">
+        <IconWithDesc
+          desc="Seeburgstrasse 50 04103, Leipzig germany"
+          href="https://maps.app.goo.gl/9cjmjK3f8ab5N6Kr7"
+        >
           <SlLocationPin />
         </IconWithDesc>
       </div>
-      <div className="flex space-x-[16px] [&>span>svg:hover]:fill-white [&>span:hover]:bg-black mb-[60px]">
+      <div className="flex space-x-[16px] mb-[60px]">
         {[
-          <PiFacebookLogoLight />,
-          <PiLinkedinLogoLight />,
-          <PiGithubLogoLight />,
-        ].map((icon, i) => (
-          <span
+          {
+            icon: <PiFacebookLogoLight />,
+            link: "https://www.facebook.com/hamza.darej",
+          },
+          {
+            icon: <PiLinkedinLogoLight />,
+            link: "https://www.linkedin.com/in/hamza-darej-068365210",
+          },
+          {
+            icon: <PiGithubLogoLight />,
+            link: "https://github.com/hamzadarej",
+          },
+        ].map((item, i) => (
+          <a
+            href={item.link}
+            target="_blank"
             key={"socialMediaIcon" + i}
-            className="h-[42px] w-[42px] border-1 flex rounded-full items-center justify-center [&>svg]:size-[24px]"
+            className="h-[42px] w-[42px] border-1 flex rounded-full items-center justify-center [&>svg]:size-[24px] group hover:bg-black [&>svg]:group-hover:fill-white"
           >
-            {icon}
-          </span>
+            {item.icon}
+          </a>
         ))}
       </div>
       <form onSubmit={handleSubmit}>
@@ -82,10 +99,11 @@ const Contact = () => {
 
         <div className="flex items-center my-14 mb-10 justify-center border rounded-full relative h-[148px] w-[148px]">
           <button
-            className={cn("text-[24px]", {
+            className={cn("text-[24px] disabled:text-gray-600", {
               "text-gray-500": state.submitting,
             })}
             type="submit"
+            disabled={state.submitting || state.succeeded}
           >
             <WaveBox extraClass="waveRunTwo">
               {state.submitting ? "submitting" : "Submit"}
@@ -100,17 +118,23 @@ const Contact = () => {
 const IconWithDesc = ({
   children,
   desc,
+  href,
 }: {
   children: ReactNode;
   desc: string;
+  href: string;
 }) => {
   return (
-    <span className="flex items-center space-x-[25px] w-full">
-      <figure className="h-[60px] min-w-[60px] border-1 flex rounded-full items-center justify-center [&>svg]:size-[25px]">
+    <a
+      target="_blank"
+      href={href}
+      className="flex items-center space-x-[25px] w-full"
+    >
+      <figure className="h-[60px] min-w-[60px] border-1 flex rounded-full items-center justify-center [&>svg]:size-[25px] group hover:bg-black [&>svg]:group-hover:fill-white">
         {children}
       </figure>
       <p>{desc}</p>
-    </span>
+    </a>
   );
 };
 

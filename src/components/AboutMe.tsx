@@ -50,7 +50,12 @@ const AboutMe = () => {
           <div className="relative bg-inherit items-center justify-center h-[350px] max-w-full min-w-[350px] mt-[8px] mb-[24px]">
             <div className="border absolute inset-0 -rotate-3" />
             <div className="absolute inset-0 border rotate-3" />
-            <div className=" h-full absolute inset-0 w-full border bg-[#ffda67] flex items-center justify-center flex-col">
+            <div
+              style={{
+                background: "var(--background)",
+              }}
+              className=" h-full absolute inset-0 w-full border flex items-center justify-center flex-col"
+            >
               <p className="h-fit poppins-bold text-[200px] leading-[120%]">
                 {year}
               </p>

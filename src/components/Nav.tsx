@@ -5,10 +5,12 @@ const Nav = ({
   onClick,
   showNavList,
   currentPage = 0,
+  theme,
 }: {
   onClick: () => void;
   showNavList: boolean;
   currentPage: number;
+  theme: string;
 }) => {
   const navbarRef = useRef<HTMLDivElement | null>(null);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -39,7 +41,7 @@ const Nav = ({
     <div
       ref={navbarRef}
       className={cn(
-        "py-[14px] transition-all duration-300 z-10 fixed top-0 px-[12px] flex justify-between w-full items-center no-scrollbar overflow-hidden",
+        "py-[14px] bg-inherit transition-all duration-300 z-10 fixed top-0 px-[12px] flex justify-between w-full items-center no-scrollbar overflow-hidden",
         {
           "bg-inherit": !showNavList,
         },
@@ -61,7 +63,7 @@ const Nav = ({
         className={cn(
           "relative h-[36px] w-[36px] [&>span]:w-[36px] [&>span]:h-[2px] mx-[4px] [&>span]:bg-[#000000] justify-center flex flex-col space-y-2",
           {
-            "[&>span]:bg-[#fff]": showNavList,
+            "[&>span]:bg-[#fff]": showNavList && theme === "dark",
           },
         )}
       >
@@ -116,7 +118,7 @@ export const NavList = ({
   return (
     <div
       className={cn(
-        "p-5 fixed h-full bg-dandelion-yellow w-28 overflow-x-scroll no-scrollbar transition-transform duration-1000",
+        "p-5 fixed bg-inherit h-full w-28 overflow-x-scroll no-scrollbar transition-transform duration-1000",
         {
           "inset-0": !isDesktop,
           "right-0 h-fit bottom-0 top-0 my-auto": isDesktop,
@@ -148,7 +150,7 @@ export const NavList = ({
         ))}
         <li className="flex flex-col pl-8 py-5">
           <span>darejhamza@gmail.com</span>
-          <span>+49 1756474664</span>
+          <span>+49 176 60387683</span>
         </li>
       </ul>
     </div>
