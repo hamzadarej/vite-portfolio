@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import { useEffect, useMemo, useState } from "react";
 import { InView } from "react-intersection-observer";
 import { cn } from "./utility/cn";
+import Projects from "./components/Projects";
 
 function App() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -16,6 +17,7 @@ function App() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1200);
   const [showNavList, setShowNavList] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
+
   const contents = useMemo(() => {
     return [
       <Home />,
@@ -23,6 +25,7 @@ function App() {
       <Service />,
       <Skills />,
       <Experience />,
+      <Projects />,
       <Reviews />,
       <Contact />,
     ];
@@ -66,12 +69,12 @@ function App() {
         />
       ) : (
         <div className="flex py-3.5 px-3 items-center gap-3.5 text-[22px]">
-          <span className="font-bold text-3xl">H&D</span>
+          <img src="./logo-nav.png" alt="portfolioLogo" className="size-16" />
           <span className="poppins-semibold">Frontend Fusion</span>
         </div>
       )}
       <div
-        className={cn("flex w-full flex-col justify-start items-start", {
+        className={cn("flex w-full flex-col justify-start items-start px-3", {
           "w-[calc(100vw-380px)]": isDesktop,
         })}
       >
@@ -87,7 +90,13 @@ function App() {
             key={index}
             className="flex w-full"
           >
+            {/*<div*/}
+            {/*  className={cn("w-full scale-0 transition-all duration-500", {*/}
+            {/*    "scale-100": currentPage <= index,*/}
+            {/*  })}*/}
+            {/*>*/}
             {item}
+            {/*</div>*/}
           </InView>
         ))}
       </div>

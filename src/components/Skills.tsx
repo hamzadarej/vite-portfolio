@@ -4,9 +4,9 @@ import SubChapter from "../Layout/SubChapter";
 import CircularProgressBar from "../Layout/CircularProgressBar";
 
 const Skills = () => (
-  <div className="px-[12px] w-full h-full poppins-medium mb-[60px]">
+  <div className="w-full h-full poppins-medium mb-[60px]">
     <section>
-      <ChapterHeadline chapter={3} />
+      <ChapterHeadline chapter={4} />
       <SubChapter
         title="ATTAINMENTS"
         subTitle="Highlight My Expertise in:"

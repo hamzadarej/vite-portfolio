@@ -16,7 +16,7 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("xleavopp");
 
   return (
-    <div className="px-[12px] h-full poppins-medium w-full">
+    <div className="h-full poppins-medium w-full">
       <ChapterHeadline chapter={6} />
 
       <SubChapter

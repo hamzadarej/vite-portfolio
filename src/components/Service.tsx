@@ -12,8 +12,8 @@ const Service = () => {
     "Version Control & Collaboration",
   ];
   return (
-    <div className="px-[12px] h-full poppins-medium w-full">
-      <ChapterHeadline chapter={2} />
+    <div className="h-full poppins-medium w-full">
+      <ChapterHeadline chapter={3} />
 
       <SubChapter
         title="MY SERVICES"

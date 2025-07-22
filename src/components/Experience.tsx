@@ -4,8 +4,8 @@ import WaveBox from "../Layout/WaveBox";
 
 const Experience = () => {
   return (
-    <div className="px-[12px] h-full poppins-medium mb-[10px]">
-      <ChapterHeadline chapter={4} />
+    <div className="h-full poppins-medium mb-[10px]">
+      <ChapterHeadline chapter={5} />
       <SubChapter
         title="EXPERIANCES"
         subTitle="Highlight My Key Experiences"

@@ -5,8 +5,8 @@ const AboutMe = () => {
   const year = new Date().getFullYear() - 2021;
 
   return (
-    <div className="px-[12px] bg-inherit h-full poppins-medium mb-[10px]">
-      <ChapterHeadline chapter={1} />
+    <div className="bg-inherit h-full poppins-medium mb-[10px]">
+      <ChapterHeadline chapter={2} />
 
       <SubChapter
         title="ABOUT ME"

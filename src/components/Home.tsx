@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div
       id="tab_0"
-      className="w-full h-screen mb-[20px] space-y-12 px-3 mt-[60px] lg:mt-0 lg:items-center lg:flex overflow-hidden"
+      className="w-full h-screen mb-[20px] space-y-12 mt-[60px] lg:mt-0 lg:items-center lg:flex overflow-hidden"
     >
       <section className="py-[60px] poppins-medium">
         <h4 className="text-[22px] lg:text-[40px] tracking-tight fade-text whitespace-nowrap">

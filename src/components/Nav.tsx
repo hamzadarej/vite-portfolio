@@ -41,7 +41,7 @@ const Nav = ({
     <div
       ref={navbarRef}
       className={cn(
-        "py-[14px] bg-inherit transition-all duration-300 z-10 fixed top-0 px-[12px] flex justify-between w-full items-center no-scrollbar overflow-hidden",
+        "bg-inherit transition-all duration-300 z-10 fixed top-0 px-[12px] flex justify-between w-full items-center no-scrollbar overflow-hidden",
         {
           "bg-inherit": !showNavList,
         },
@@ -54,7 +54,9 @@ const Nav = ({
           transform: showNavList ? "translateY(-100px)" : "translateY(0)",
         }}
       >
-        <span className="font-bold text-[30px]">H&D</span>
+        <span className="font-bold text-[30px]">
+          <img src="./logo-nav.png" alt="portfolioLogo" className="size-16" />
+        </span>
         <span className="poppins-semibold">Frontend Fusion</span>
       </div>
 
@@ -100,7 +102,7 @@ const list = [
   "03 MY SERVICES",
   "04 SKILL",
   "05 EXPERIENCES",
-  // "07 PROJECTS",
+  "06 PROJECTS",
   "06 HOW I WORK",
   "7 CONTACT",
 ];
