@@ -132,11 +132,11 @@ export const NavList = ({
     >
       <ul className="mt-6 poppins-medium h-full border-l-2 border-black/50 text-[16px]  gap-2 flex flex-col">
         {list.map((item, index) => (
-          <li
+          <a
             onClick={() => {
-              window.location.hash = "tab_" + index;
               onClick?.();
             }}
+            href={"#tab_" + (index + 1)}
             key={item}
             className={cn("w-24 -ml-[2px] h-11 z-9 flex items-center pl-8", {
               "border-l-2 border-l-black relative overflow-hidden":
@@ -144,11 +144,11 @@ export const NavList = ({
               "hover:bg-black/15": currentPage !== index,
             })}
           >
-            <a href={"#tab_" + (index + 1)}>{item}</a>
+            {item}
             {currentPage === index && (
               <span className="bg-black/15 block absolute inset-0 w-full animate-fade" />
             )}
-          </li>
+          </a>
         ))}
         <li className="flex flex-col pl-8 py-5">
           <span>darejhamza@gmail.com</span>
