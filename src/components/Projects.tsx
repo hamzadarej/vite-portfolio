@@ -9,11 +9,11 @@ const Projects = () => {
       window.navigator.userAgent,
     );
 
-  const Item = ({ children, href }: { children: ReactNode; href: string }) => (
+  const Card = ({ children, href }: { children: ReactNode; href: string }) => (
     <a
       href={href}
       target="_blank"
-      className="relative group bg-inherit rounded-md items-center justify-center h-[500px] flex min-w-[400px] mt-[8px] mb-[24px]"
+      className="relative group bg-inherit rounded-md items-center justify-center h-[500px] flex min-w-[200px] mt-[8px] mb-[24px]"
     >
       <div
         className={cn(
@@ -67,36 +67,50 @@ const Projects = () => {
     </a>
   );
 
+  const projectList = [
+    {
+      href: "https://flower-shop-react-sepia.vercel.app/",
+      imgSrc: "/flower1.png",
+      alt: "flower-shop-image",
+      title: "Bloom & Blossom",
+      subTitle: "E-commerce Platform",
+    },
+    {
+      href: "https://vite-weather-mkuyi20fr-hamzadarejs-projects.vercel.app/",
+      imgSrc: "/weather.png",
+      alt: "weather-app-image",
+      title: "Weather App",
+      subTitle: "information website",
+    },
+    {
+      href: "https://vite-weather-app-henna.vercel.app/",
+      imgSrc: "/instagram-clone.png",
+      alt: "Instagram-clone-image",
+      title: "Instagram Clone",
+      subTitle: "Social Networking",
+    },
+  ];
+
   return (
-    <div className="w-full">
+    <div className="w-full pb-8">
       <ChapterHeadline chapter={6} />
       <SubChapter
         title="PROJECTS"
         subTitle="Some of My Most Privat Projects"
         more="My Featured Projects"
       />
-      <div className="w-full mt-15 grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(400px,1fr))]">
-        <Item href="https://flower-shop-react-sepia.vercel.app/">
-          <img
-            src="/flower1.png"
-            alt="flower-shop-image"
-            className="h-full w-full"
-          />
-        </Item>
-        <Item href="https://vite-weather-app-henna.vercel.app/">
-          <img
-            src="/instagram-clone.png"
-            alt="weather-app-image"
-            className="h-full w-full"
-          />
-        </Item>
-        <Item href="https://vite-weather-mkuyi20fr-hamzadarejs-projects.vercel.app/">
-          <img
-            src="/waether.png"
-            alt="weather-app-image"
-            className="h-full w-full"
-          />
-        </Item>
+      <div className="w-full mt-15 grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+        {projectList.map(({ href, imgSrc, alt, title, subTitle }) => (
+          <div key={alt} className="flex flex-col">
+            <Card href={href}>
+              <img src={imgSrc} alt={alt} className="h-full w-full" />
+            </Card>
+            <span className="text-[16px] poppins-regular">
+              <p className="poppins-bold text-3xl pb-1">{title}</p>
+              <p>{subTitle}</p>
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );

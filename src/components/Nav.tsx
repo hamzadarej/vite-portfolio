@@ -55,7 +55,7 @@ const Nav = ({
         }}
       >
         <span className="font-bold text-[30px]">
-          <img src="./logo-nav.png" alt="portfolioLogo" className="size-16" />
+          <img src="/logo-nav.png" alt="portfolioLogo" className="size-16" />
         </span>
         <span className="poppins-semibold">Frontend Fusion</span>
       </div>

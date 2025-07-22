@@ -69,7 +69,7 @@ function App() {
         />
       ) : (
         <div className="flex py-3.5 px-3 items-center gap-3.5 text-[22px]">
-          <img src="./logo-nav.png" alt="portfolioLogo" className="size-16" />
+          <img src="/logo-nav.png" alt="portfolioLogo" className="size-16" />
           <span className="poppins-semibold">Frontend Fusion</span>
         </div>
       )}
