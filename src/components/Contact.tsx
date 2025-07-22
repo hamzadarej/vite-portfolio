@@ -16,8 +16,8 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("xleavopp");
 
   return (
-    <div className="h-full poppins-medium w-full">
-      <ChapterHeadline chapter={6} />
+    <>
+      <ChapterHeadline chapter={8} />
 
       <SubChapter
         title="CONTACT"
@@ -111,7 +111,7 @@ const Contact = () => {
           </button>
         </div>
       </form>
-    </div>
+    </>
   );
 };
 

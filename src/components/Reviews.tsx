@@ -8,8 +8,8 @@ import avatarDaImage from "../../public/avatarda.svg";
 
 const Reviews = () => {
   return (
-    <div className="poppins-medium w-full">
-      <ChapterHeadline chapter={5} />
+    <>
+      <ChapterHeadline chapter={7} />
 
       <SubChapter
         title="TESTIMONIALS"
@@ -40,7 +40,7 @@ const Reviews = () => {
           ))}
         </SimpleSlider>
       </div>
-    </div>
+    </>
   );
 };
 const reviewList = [

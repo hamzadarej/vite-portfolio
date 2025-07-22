@@ -5,7 +5,7 @@ const AboutMe = () => {
   const year = new Date().getFullYear() - 2021;
 
   return (
-    <div className="bg-inherit h-full poppins-medium mb-[10px]">
+    <>
       <ChapterHeadline chapter={2} />
 
       <SubChapter
@@ -14,8 +14,8 @@ const AboutMe = () => {
         more="Know Me More"
       />
 
-      <div className="bg-inherit">
-        <h2 className=" text-[32px] mb-[28px]">
+      <div>
+        <h2 className="text-[32px] mb-[28px]">
           I'm Hamza Darej, a WEB Developer
         </h2>
         <p className="mb-[40px] poppins-regular">
@@ -64,7 +64,7 @@ const AboutMe = () => {
           </div>
         </section>
       </div>
-    </div>
+    </>
   );
 };
 

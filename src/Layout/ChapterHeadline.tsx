@@ -1,5 +1,5 @@
 const ChapterHeadline = ({ chapter }: { chapter: number }) => {
-  const chapterLength = 7;
+  const chapterLength = 8;
   return (
     <div
       id={"tab_" + chapter}

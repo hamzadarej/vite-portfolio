@@ -103,8 +103,8 @@ const list = [
   "04 SKILL",
   "05 EXPERIENCES",
   "06 PROJECTS",
-  "06 HOW I WORK",
-  "7 CONTACT",
+  "07 HOW I WORK",
+  "08 CONTACT",
 ];
 export const NavList = ({
   currentPage,
@@ -120,7 +120,7 @@ export const NavList = ({
   return (
     <div
       className={cn(
-        "p-5 fixed bg-inherit h-full w-28 overflow-x-scroll no-scrollbar transition-transform duration-1000",
+        "p-5 fixed bg-inherit h-full w-28 overflow-x-scroll no-scrollbar transition-transform duration-500",
         {
           "inset-0": !isDesktop,
           "right-0 h-fit bottom-0 top-0 my-auto": isDesktop,
@@ -144,7 +144,7 @@ export const NavList = ({
               "hover:bg-black/15": currentPage !== index,
             })}
           >
-            <a href={"#tab_" + index}>{item}</a>
+            <a href={"#tab_" + (index + 1)}>{item}</a>
             {currentPage === index && (
               <span className="bg-black/15 block absolute inset-0 w-full animate-fade" />
             )}

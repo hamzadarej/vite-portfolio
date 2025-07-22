@@ -4,7 +4,7 @@ import WaveBox from "../Layout/WaveBox";
 
 const Experience = () => {
   return (
-    <div className="h-full poppins-medium mb-[10px]">
+    <>
       <ChapterHeadline chapter={5} />
       <SubChapter
         title="EXPERIANCES"
@@ -22,7 +22,7 @@ const Experience = () => {
           </li>
         ))}
       </ul>
-      <div className="h-[132px] relative flex items-center justify-center rounded-full w-[132px] border my-[40px]">
+      <div className="h-[132px] relative flex items-center justify-center rounded-full w-[132px] border mb-[50px] mt-[40px]">
         <WaveBox extraClass="waveRunTwo">
           <a href="../../public/CV.pdf" download>
             <svg
@@ -40,7 +40,7 @@ const Experience = () => {
           </a>
         </WaveBox>
       </div>
-    </div>
+    </>
   );
 };
 

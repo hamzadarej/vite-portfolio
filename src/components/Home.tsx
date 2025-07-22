@@ -4,8 +4,8 @@ import homeImg from "../../public/home.png";
 const Home = () => {
   return (
     <div
-      id="tab_0"
-      className="w-full h-screen mb-[20px] space-y-12 mt-[60px] lg:mt-0 lg:items-center lg:flex overflow-hidden"
+      id="tab_1"
+      className="space-y-12 h-screen mt-14 lg:mt-0 lg:items-center lg:flex overflow-hidden"
     >
       <section className="py-[60px] poppins-medium">
         <h4 className="text-[22px] lg:text-[40px] tracking-tight fade-text whitespace-nowrap">
@@ -31,12 +31,15 @@ const Home = () => {
           <span>Leipzig, </span>
           <span>Germany.</span>
         </p>
-        <div className="pt-12 space-x-6 overflow-hidden">
-          <button className="bg-black rounded-3xl py-[10px] text-white px-[14px]">
-            View My Work
-          </button>
+        <div className="pt-12 space-x-6">
           <a
             href={"#tab_6"}
+            className="bg-black rounded-3xl py-[10px] text-white px-[14px]"
+          >
+            View My Work
+          </a>
+          <a
+            href={"#tab_8"}
             className="border-black border rounded-3xl py-[10px] text-black px-[16px]"
           >
             Contact Me

@@ -88,15 +88,9 @@ function App() {
             }}
             id={`content-${index}`}
             key={index}
-            className="flex w-full"
+            className="w-full poppins-medium h-full"
           >
-            {/*<div*/}
-            {/*  className={cn("w-full scale-0 transition-all duration-500", {*/}
-            {/*    "scale-100": currentPage <= index,*/}
-            {/*  })}*/}
-            {/*>*/}
             {item}
-            {/*</div>*/}
           </InView>
         ))}
       </div>

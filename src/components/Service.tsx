@@ -12,9 +12,8 @@ const Service = () => {
     "Version Control & Collaboration",
   ];
   return (
-    <div className="h-full poppins-medium w-full">
+    <>
       <ChapterHeadline chapter={3} />
-
       <SubChapter
         title="MY SERVICES"
         subTitle="How I can Help Your Next Project"
@@ -36,7 +35,7 @@ const Service = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -4,7 +4,7 @@ import SubChapter from "../Layout/SubChapter";
 import CircularProgressBar from "../Layout/CircularProgressBar";
 
 const Skills = () => (
-  <div className="w-full h-full poppins-medium mb-[60px]">
+  <>
     <section>
       <ChapterHeadline chapter={4} />
       <SubChapter
@@ -45,7 +45,7 @@ const Skills = () => (
       <div className="text-[28px] -mt-[20px] mb-[40px] text-[#575757]">
         <div className="-rotate-90 w-fit h-fit">02.-</div>
       </div>
-      <div className="gap-10 flex flex-col items-center">
+      <div className="gap-10 flex flex-col items-center mb-14">
         {languageList.map(({ name, score }) => {
           return (
             <div className="flex flex-col items-center" key={name}>
@@ -62,7 +62,7 @@ const Skills = () => (
         })}
       </div>
     </section>
-  </div>
+  </>
 );
 const languageList = [
   { name: "German", score: 82 },

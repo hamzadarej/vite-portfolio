@@ -3,12 +3,8 @@ import SubChapter from "../Layout/SubChapter";
 import { ReactNode } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { cn } from "../utility/cn";
+import { isMobile } from "../utility/device";
 const Projects = () => {
-  const isMobile =
-    /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      window.navigator.userAgent,
-    );
-
   const Card = ({ children, href }: { children: ReactNode; href: string }) => (
     <a
       href={href}
@@ -92,14 +88,14 @@ const Projects = () => {
   ];
 
   return (
-    <div className="w-full pb-8">
+    <>
       <ChapterHeadline chapter={6} />
       <SubChapter
         title="PROJECTS"
         subTitle="Some of My Most Privat Projects"
         more="My Featured Projects"
       />
-      <div className="w-full mt-15 grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+      <div className="w-full px-2 mt-15 mb-8 grid gap-10 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
         {projectList.map(({ href, imgSrc, alt, title, subTitle }) => (
           <div key={alt} className="flex flex-col">
             <Card href={href}>
@@ -112,7 +108,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 export default Projects;
