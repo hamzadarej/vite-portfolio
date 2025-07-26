@@ -65,7 +65,7 @@ const Projects = () => {
 
   const projectList = [
     {
-      href: "https://flower-shop-react-sepia.vercel.app/",
+      href: "https://flower-shop-jet-beta.vercel.app/",
       imgSrc: "/flower1.png",
       alt: "flower-shop-image",
       title: "Bloom & Blossom",
@@ -79,11 +79,11 @@ const Projects = () => {
       subTitle: "information website",
     },
     {
-      href: "https://vite-weather-app-henna.vercel.app/",
-      imgSrc: "/instagram-clone.png",
-      alt: "Instagram-clone-image",
-      title: "Instagram Clone",
-      subTitle: "Social Networking",
+      href: "https://habit-tracker-app-swart.vercel.app/",
+      imgSrc: "/habit-app-image.png",
+      alt: "habit-app-image",
+      title: "Habit Tracker",
+      subTitle: "Lifestyle website",
     },
   ];
 
