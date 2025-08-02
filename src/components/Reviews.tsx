@@ -32,7 +32,7 @@ const Reviews = () => {
                 </div>
                 <h2 className="text-[32px] poppins-bold text-black">{name}</h2>
                 <p className="poppins-semibold mb-[24px]">{position}</p>
-                <p className="text-[20px] poppins-regular-italic no-scrollbar max-h-[210px] overflow-y-scroll">
+                <p className="text-[20px] poppins-regular-italic max-h-[210px] overflow-y-scroll">
                   {review}
                 </p>
               </div>

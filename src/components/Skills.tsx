@@ -2,68 +2,80 @@ import ChapterHeadline from "../Layout/ChapterHeadline";
 import SubChapter from "../Layout/SubChapter";
 
 import CircularProgressBar from "../Layout/CircularProgressBar";
+import { useInView } from "react-intersection-observer";
+const IN_VIEW_OPTIONS = {
+  threshold: 0.4,
+  triggerOnce: true,
+};
 
-const Skills = () => (
-  <>
-    <section>
-      <ChapterHeadline chapter={4} />
-      <SubChapter
-        title="ATTAINMENTS"
-        subTitle="Highlight My Expertise in:"
-        more="Developer Skills"
-        addStyle="flex-col-reverse"
-      />
-      <div className="text-[28px] -mt-[20px] mb-[40px] text-[#575757]">
-        <div className="-rotate-90 w-fit h-fit">01.-</div>
-      </div>
-      <div className="w-full space-y-[16px]">
-        {skillsList.map(({ name, score }, index) => {
-          return (
-            <div key={index}>
-              <article className="flex items-center w-full justify-between mb-[8px]">
-                <p>{name}</p>
-                <p>{score}</p>
-              </article>
-              <article className="h-[6px] bg-white w-full rounded-md relative">
-                <span
-                  style={{ width: `${score}%` }}
-                  className="w-full inset-0 absolute bg-black rounded-md"
+const Skills = () => {
+  const { ref, inView } = useInView(IN_VIEW_OPTIONS);
+  const { ref: ref1, inView: inView1 } = useInView(IN_VIEW_OPTIONS);
+
+  return (
+    <>
+      <section>
+        <ChapterHeadline chapter={4} />
+        <SubChapter
+          title="ATTAINMENTS"
+          subTitle="Highlight My Expertise in:"
+          more="Developer Skills"
+          addStyle="flex-col-reverse"
+        />
+        <div className="text-[28px] -mt-[20px] mb-[40px] text-[#575757]">
+          <div className="-rotate-90 w-fit h-fit">01.-</div>
+        </div>
+        <div className="w-full space-y-[16px]" ref={ref}>
+          {skillsList.map(({ name, score }, index) => {
+            return (
+              <div key={index}>
+                <article className="flex items-center w-full justify-between mb-[8px]">
+                  <p>{name}</p>
+                  <p>{score}</p>
+                </article>
+                <article className="h-[6px] bg-white w-full rounded-md relative">
+                  <span
+                    style={{ width: `${inView ? score : 0}%` }}
+                    className="w-full inset-0 absolute bg-black rounded-md transition-[width] duration-1000 ease-in-out"
+                  />
+                </article>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      <section>
+        <SubChapter
+          title="ATTAINMENTS"
+          subTitle="Highlight My Expertise in:"
+          more="Language Skills"
+          addStyle="flex-col-reverse"
+        />
+        <div className="text-[28px] -mt-[20px] mb-[40px] text-[#575757]">
+          <div className="-rotate-90 w-fit h-fit">02.-</div>
+        </div>
+
+        <div className="gap-10 flex flex-col items-center mb-14" ref={ref1}>
+          {languageList.map(({ name, score }) => {
+            return (
+              <div className="flex flex-col items-center" key={name}>
+                <CircularProgressBar
+                  percentage={score}
+                  strokeWidth={8}
+                  sqSize={166}
+                  inView={inView1}
                 />
-              </article>
-            </div>
-          );
-        })}
-      </div>
-    </section>
-    <section>
-      <SubChapter
-        title="ATTAINMENTS"
-        subTitle="Highlight My Expertise in:"
-        more="Language Skills"
-        addStyle="flex-col-reverse"
-      />
-      <div className="text-[28px] -mt-[20px] mb-[40px] text-[#575757]">
-        <div className="-rotate-90 w-fit h-fit">02.-</div>
-      </div>
-      <div className="gap-10 flex flex-col items-center mb-14">
-        {languageList.map(({ name, score }) => {
-          return (
-            <div className="flex flex-col items-center" key={name}>
-              <CircularProgressBar
-                percentage={score}
-                strokeWidth={8}
-                sqSize={166}
-              />
-              <span className="cursor-pointer py-[8px] px-[42px] w-fit border-1 hover:bg-black hover:text-white mt-[20px] rounded-3xl">
-                {name}
-              </span>
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  </>
-);
+                <span className="cursor-pointer py-[8px] px-[42px] w-fit border-1 hover:bg-black hover:text-white mt-[20px] rounded-3xl">
+                  {name}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    </>
+  );
+};
 const languageList = [
   { name: "German", score: 82 },
   { name: "English", score: 60 },

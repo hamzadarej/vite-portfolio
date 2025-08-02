@@ -1,6 +1,7 @@
 import ChapterHeadline from "../Layout/ChapterHeadline";
 import SubChapter from "../Layout/SubChapter";
 import WaveBox from "../Layout/WaveBox";
+import CV from "../../public/Lebenslauf-2025.pdf";
 
 const Experience = () => {
   return (
@@ -23,9 +24,9 @@ const Experience = () => {
         ))}
       </ul>
       <a
-        href="../../public/Lebenslauf-2025.pdf"
+        href={CV}
         download
-        className="h-[132px] relative flex items-center justify-center rounded-full w-[132px] border mb-[50px] mt-[40px]"
+        className="h-[132px] relative flex flex-col items-center justify-center rounded-full w-[132px] border mb-[50px] mt-[40px]"
       >
         <WaveBox extraClass="waveRunTwo">
           <svg
@@ -40,6 +41,7 @@ const Experience = () => {
               stroke="currentColor"
             />
           </svg>
+          <strong className="text-sm">CV</strong>
         </WaveBox>
       </a>
     </>
