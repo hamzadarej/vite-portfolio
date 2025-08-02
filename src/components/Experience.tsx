@@ -22,24 +22,26 @@ const Experience = () => {
           </li>
         ))}
       </ul>
-      <div className="h-[132px] relative flex items-center justify-center rounded-full w-[132px] border mb-[50px] mt-[40px]">
+      <a
+        href="../../public/Lebenslauf-2025.pdf"
+        download
+        className="h-[132px] relative flex items-center justify-center rounded-full w-[132px] border mb-[50px] mt-[40px]"
+      >
         <WaveBox extraClass="waveRunTwo">
-          <a href="../../public/CV.pdf" download>
-            <svg
-              width="45"
-              height="54"
-              viewBox="0 0 45 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M44 31.449L22.5 52.949L1 31.449L8.98204 23.3382L16.8353 31.449V0.550781H28.1647V31.449L36.018 23.3382L44 31.449Z"
-                stroke="currentColor"
-              />
-            </svg>
-          </a>
+          <svg
+            width="45"
+            height="54"
+            viewBox="0 0 45 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M44 31.449L22.5 52.949L1 31.449L8.98204 23.3382L16.8353 31.449V0.550781H28.1647V31.449L36.018 23.3382L44 31.449Z"
+              stroke="currentColor"
+            />
+          </svg>
         </WaveBox>
-      </div>
+      </a>
     </>
   );
 };
