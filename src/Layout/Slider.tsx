@@ -1,21 +1,9 @@
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
-import { FC, ReactNode, useEffect, useState } from "react";
+import { FC, ReactNode } from "react";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+
 const SimpleSlider: FC<{ children: ReactNode }> = ({ children }) => {
-  const [slidesToShow, setSlidesToShow] = useState(
-    Math.round(window.innerWidth / 600),
-  );
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setSlidesToShow(Math.round(window.innerWidth / 600));
-    };
-    globalThis.window.addEventListener("resize", handleScroll);
-
-    return () => window.removeEventListener("resize", handleScroll);
-  }, []);
-
   const arrowStyle = {
     border: "1px solid black",
     borderRadius: "50%",
@@ -44,9 +32,9 @@ const SimpleSlider: FC<{ children: ReactNode }> = ({ children }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: slidesToShow > 3 ? 3 : slidesToShow,
+    slidesToShow: 3,
     slidesToScroll: 1,
-
+    initialSlide: 0,
     autoplaySpeed: 2500,
     swipeToSlide: true,
 
@@ -60,6 +48,30 @@ const SimpleSlider: FC<{ children: ReactNode }> = ({ children }) => {
         <GoArrowLeft style={arrowStyle} />
       </SlickButtonFix>
     ),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (

@@ -6,15 +6,15 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { InView } from "react-intersection-observer";
 import { cn } from "./utility/cn";
 import Projects from "./components/Projects";
+import { useDevice } from "./hooks/useDevice";
 
 function App() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
-
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1200);
+  const isDesktop = useDevice();
   const [showNavList, setShowNavList] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -29,17 +29,6 @@ function App() {
       <Reviews />,
       <Contact />,
     ];
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1200);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup listener on unmount
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
