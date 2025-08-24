@@ -24,6 +24,9 @@ Check it out live at:
 
 ##  Project Structure
 
+## Project Structure
+
+```bash
 ├── public/             # Static public assets
 ├── src/
 │   ├── assets/         # Images, icons, etc.
