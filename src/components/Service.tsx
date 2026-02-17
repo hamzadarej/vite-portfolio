@@ -1,35 +1,37 @@
 import ChapterHeadline from "../Layout/ChapterHeadline";
 import SubChapter from "../Layout/SubChapter";
 import { RiArrowRightDoubleLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
+
 const Service = () => {
-  const serviceList = [
-    "Responsive Web Design",
-    "Modern Tech Stack",
-    "Pixel-perfect UI Implementation",
-    "Component-based Architecture",
-    "Performance Optimization",
-    "Cross-browser Compatibility",
-    "Version Control & Collaboration",
-  ];
+  const { t } = useTranslation();
+
+  const serviceKeys = [
+    "responsiveWebDesign",
+    "modernTechStack",
+    "pixelPerfectUI",
+    "componentBasedArch",
+    "performanceOptimization",
+    "crossBrowserCompatibility",
+    "versionControl",
+  ] as const;
+
   return (
     <>
       <ChapterHeadline chapter={3} />
       <SubChapter
-        title="MY SERVICES"
-        subTitle="How I can Help Your Next Project"
-        more="What I Do"
+        title={t("services.title")}
+        subTitle={t("services.subTitle")}
+        more={t("services.more")}
       />
 
       <div className="p-[16px]">
         <div className="h-[410px] w-full border">
           <ul className=" text-[18px] flex flex-col justify-between h-full p-6">
-            {serviceList.map((service) => (
-              <li
-                key={service}
-                className="shrink-0 flex items-center space-x-2"
-              >
+            {serviceKeys.map((key) => (
+              <li key={key} className="shrink-0 flex items-center space-x-2">
                 <RiArrowRightDoubleLine />
-                <span key={service}>{service}</span>
+                <span>{t(`services.list.${key}`)}</span>
               </li>
             ))}
           </ul>

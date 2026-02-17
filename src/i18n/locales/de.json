@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "top": "01 OBEN",
+    "aboutMe": "02 ÜBER MICH",
+    "myServices": "03 MEINE DIENSTE",
+    "skills": "04 FÄHIGKEITEN",
+    "experiences": "05 ERFAHRUNGEN",
+    "projects": "06 PROJEKTE",
+    "howIWork": "07 WIE ICH ARBEITE",
+    "contact": "08 KONTAKT",
+    "frontendFusion": "Frontend Fusion"
+  },
+  "home": {
+    "greeting": "HI, ICH BIN EIN ENTWICKLER",
+    "hi": "HI,",
+    "iAmA": "ICH BIN EIN",
+    "developer": "ENTWICKLER",
+    "frontend": "Frontend",
+    "react": "React Expert",
+    "basedIn": "mit Sitz in Leipzig, Deutschland.",
+    "viewMyWork": "Meine Arbeit ansehen",
+    "contactMe": "Kontaktiere mich"
+  },
+  "aboutMe": {
+    "title": "ÜBER MICH",
+    "subTitle": "Ein paar Worte über mich",
+    "more": "Erfahre mehr über mich",
+    "intro": "Ich bin Hamza Darej, ein WEB-Entwickler",
+    "description1": "Ich bin ein Frontend-Entwickler mit einer Leidenschaft für die Erstellung sauberer, responsiver und ansprechender Web-Interfaces. Ich bin spezialisiert darauf, Design-Ideen in interaktive, hochleistungsfähige Websites und Webanwendungen zu verwandeln, unter Verwendung moderner Tools und Technologien wie HTML, CSS, JavaScript, React und Tailwind CSS.",
+    "description2": "Ich konzentriere mich auf das Schreiben von sauberem, wartbarem Code und die Erstellung benutzerorientierter Erfahrungen, die nahtlos auf allen Geräten und Browsern funktionieren. Mit einem starken Auge für Details und einer Liebe für UI/UX arbeite ich gerne mit Designern und Backend-Entwicklern zusammen, um Projekte zum Leben zu erwecken.",
+    "email": "E-Mail:",
+    "dateOfBirth": "Geburtsdatum:",
+    "dateOfBirthValue": "17. September 1993",
+    "address": "Adresse",
+    "addressValue": "Deutschland, Leipzig",
+    "yearsExperience": "Jahre Erfahrung"
+  },
+  "services": {
+    "title": "MEINE DIENSTE",
+    "subTitle": "Wie ich Ihrem nächsten Projekt helfen kann",
+    "more": "Was ich mache",
+    "list": {
+      "responsiveWebDesign": "Responsives Webdesign",
+      "modernTechStack": "Moderner Tech-Stack",
+      "pixelPerfectUI": "Pixelgenaue UI-Implementierung",
+      "componentBasedArch": "Komponentenbasierte Architektur",
+      "performanceOptimization": "Leistungsoptimierung",
+      "crossBrowserCompatibility": "Cross-Browser-Kompatibilität",
+      "versionControl": "Versionskontrolle & Zusammenarbeit"
+    }
+  },
+  "skills": {
+    "title": "KOMPETENZEN",
+    "subTitle": "Meine Expertise im Überblick:",
+    "devSkills": "Entwickler-Fähigkeiten",
+    "langSkills": "Sprachkenntnisse",
+    "frontEnd": "Front-End-Entwicklung",
+    "backEnd": "Back-End-Entwicklung",
+    "fullStack": "Full-Stack-Entwicklung",
+    "database": "Datenbankverwaltung",
+    "versionControl": "Versionskontrolle",
+    "apiIntegration": "Front-End API-Integration",
+    "german": "Deutsch",
+    "english": "Englisch",
+    "french": "Französisch"
+  },
+  "experience": {
+    "title": "ERFAHRUNGEN",
+    "subTitle": "Meine wichtigsten Erfahrungen",
+    "more": "Meine Erfahrung",
+    "cv": "CV",
+    "positions": {
+      "senior": {
+        "duration": "(2025 - Heute)",
+        "position": "Senior-Entwickler bei CHECK24 Travel:",
+        "desc": "Unterstützung bei der Entwicklung einer neuen Team-Erstellungs-Web-App (WebView) für iOS und Android unter Verwendung des Remix-Frameworks für effiziente serverseitige API-Aufrufe."
+      },
+      "professional": {
+        "duration": "(2024 - 2025)",
+        "position": "Professioneller Entwickler bei CHECK24 Flight:",
+        "desc": "Entwicklung einer CMS-gesteuerten statischen Flug-Landingpage mit vorab abgerufenen Suchergebnissen, optimiert für Suchmaschinenwerbung. Verbesserung unseres Projekts mit modernen Tools wie TanStack und Tailwind, während neue Auszubildende durch Ideenaustausch und Code-Reviews betreut werden."
+      },
+      "junior": {
+        "duration": "(2022 - 2024)",
+        "position": "Junior-Entwickler bei CHECK24 Flight:",
+        "desc": "Entwicklung responsiver und interaktiver Front-End-Web-Apps mit dem JS-Framework React: HTML, CSS und JavaScript. Enge Zusammenarbeit mit Designern zur Implementierung optisch ansprechender und benutzerfreundlicher Websites."
+      }
+    }
+  },
+  "projects": {
+    "title": "PROJEKTE",
+    "subTitle": "Einige meiner privatesten Projekte",
+    "more": "Meine ausgewählten Projekte",
+    "bloomBlossom": {
+      "title": "Bloom & Blossom",
+      "subTitle": "E-Commerce-Plattform"
+    },
+    "weatherApp": {
+      "title": "Wetter-App",
+      "subTitle": "Informationswebsite"
+    },
+    "habitTracker": {
+      "title": "Gewohnheits-Tracker",
+      "subTitle": "Lifestyle-Website"
+    }
+  },
+  "reviews": {
+    "title": "REFERENZEN",
+    "subTitle": "Meine Referenzen",
+    "more": "Bewertungen meiner Kollegen"
+  },
+  "contact": {
+    "title": "KONTAKT",
+    "subTitle": "Lass uns in Kontakt treten",
+    "more": "Kontaktiere mich",
+    "leaveMessage": "Hinterlasse eine Nachricht",
+    "successMessage": "Vielen Dank für Ihre Nachricht — Ich werde mich in Kürze bei Ihnen melden!",
+    "name": "Name",
+    "namePlaceholder": "Ihr Name",
+    "email": "E-Mail",
+    "emailPlaceholder": "Ihre E-Mail",
+    "message": "Nachricht",
+    "messagePlaceholder": "Ihre Nachricht",
+    "submit": "Absenden",
+    "submitting": "wird gesendet"
+  },
+  "common": {
+    "nextChapter": "Nächstes Kapitel"
+  }
+}

@@ -1,5 +1,9 @@
+import { useTranslation } from "react-i18next";
+
 const ChapterHeadline = ({ chapter }: { chapter: number }) => {
+  const { t } = useTranslation();
   const chapterLength = 8;
+
   return (
     <div
       id={"tab_" + chapter}
@@ -8,7 +12,7 @@ const ChapterHeadline = ({ chapter }: { chapter: number }) => {
       <span className="poppins-regular text-[16px] text-[#00000080]">
         {chapter}/{chapterLength}
       </span>
-      <span className="poppins-medium text-[20px]">Next Chapter</span>
+      <span className="poppins-medium text-[20px]">{t("common.nextChapter")}</span>
       <span className="size-[24px] [&>svg]:size-[24px]">
         <svg
           fill="#000000"

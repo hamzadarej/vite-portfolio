@@ -11,12 +11,24 @@ import { InView } from "react-intersection-observer";
 import { cn } from "./utility/cn";
 import Projects from "./components/Projects";
 import { useDevice } from "./hooks/useDevice";
+import { useTranslation } from "react-i18next";
+
+enum Theme {
+  DARK = "dark",
+  LIGHT = "light",
+}
 
 function App() {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const { i18n } = useTranslation();
+  const [theme, setTheme] = useState<Theme>(Theme.DARK);
   const isDesktop = useDevice();
   const [showNavList, setShowNavList] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "de" : "en";
+    i18n.changeLanguage(newLang);
+  };
 
   const contents = useMemo(() => {
     return [
@@ -35,19 +47,30 @@ function App() {
     <div
       data-theme={theme}
       className={cn(
-        "xl:px-20 overflow-y-scroll relative no-scrollbar h-full flex flex-col justify-start items-start",
+        "xl:px-20 overflow-y-scroll relative no-scrollbar h-full flex flex-col justify-start items-start"
       )}
       style={{
         background: "var(--background)",
       }}
     >
-      <button
-        type="button"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="fixed bottom-4 right-4 z-50 p-2 rounded border-solid text-[var(--text)] shadow-xl border-2 border-black/10"
-      >
-        {theme === "light" ? "🌙" : "☀️"}
-      </button>
+      <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
+        <button
+          type="button"
+          onClick={toggleLanguage}
+          className="p-2 rounded border-solid text-[var(--text)] shadow-xl border-2 border-black/10 bg-[var(--background)] font-semibold text-sm"
+        >
+          {i18n.language === "en" ? "🇩🇪 DE" : "🇬🇧 EN"}
+        </button>
+        <button
+          type="button"
+          onClick={() =>
+            setTheme(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK)
+          }
+          className="p-2 rounded border-solid text-[var(--text)] shadow-xl border-2 border-black/10 bg-[var(--background)]"
+        >
+          {theme === Theme.LIGHT ? "🌙" : "☀️"}
+        </button>
+      </div>
 
       {!isDesktop ? (
         <Nav
@@ -89,7 +112,7 @@ function App() {
       <div
         onClick={() => setShowNavList(false)}
         className={cn(
-          "fixed inset-0 w-full h-full transition-transform duration-1000 ease-in-out bg-black/25",
+          "fixed inset-0 w-full h-full transition-transform duration-1000 ease-in-out bg-black/25"
         )}
         style={{
           transform: showNavList ? "translateX(0)" : "translateX(100%)",

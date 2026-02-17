@@ -11,8 +11,10 @@ import WaveBox from "../Layout/WaveBox";
 import { ReactNode } from "react";
 import { cn } from "../utility/cn";
 import { FieldValues, SubmissionError } from "@formspree/core";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [state, handleSubmit] = useForm("xleavopp");
 
   return (
@@ -20,9 +22,9 @@ const Contact = () => {
       <ChapterHeadline chapter={8} />
 
       <SubChapter
-        title="CONTACT"
-        subTitle="Let's get in Touch"
-        more="Contact Me"
+        title={t("contact.title")}
+        subTitle={t("contact.subTitle")}
+        more={t("contact.more")}
       />
       <div className="my-[24px] space-y-[24px]">
         <IconWithDesc desc="+49 176 60387683" href="tel:+4917660387683">
@@ -68,32 +70,28 @@ const Contact = () => {
       </div>
       <form onSubmit={handleSubmit}>
         <h2 className="text-[28px] poppins-semibold  realative">
-          Leave a Message
+          {t("contact.leaveMessage")}
         </h2>
 
         <div className="text-center my-5 text-green-700">
-          {state.succeeded && (
-            <>
-              Many thanks for your message — I’ll be in touch with you shortly!
-            </>
-          )}
+          {state.succeeded && <>{t("contact.successMessage")}</>}
         </div>
         <Input
           name="name"
-          label="Name"
-          placeholder="Your name"
+          label={t("contact.name")}
+          placeholder={t("contact.namePlaceholder")}
           errors={state.errors}
         />
         <Input
           name="email"
-          label="Email"
-          placeholder="Your e-mail"
+          label={t("contact.email")}
+          placeholder={t("contact.emailPlaceholder")}
           errors={state.errors}
         />
         <Input
           name="message"
-          label="Message"
-          placeholder="Your message"
+          label={t("contact.message")}
+          placeholder={t("contact.messagePlaceholder")}
           errors={state.errors}
         />
 
@@ -106,7 +104,7 @@ const Contact = () => {
             disabled={state.submitting || state.succeeded}
           >
             <WaveBox extraClass="waveRunTwo">
-              {state.submitting ? "submitting" : "Submit"}
+              {state.submitting ? t("contact.submitting") : t("contact.submit")}
             </WaveBox>
           </button>
         </div>
@@ -154,6 +152,7 @@ const Input = ({
       <section className="flex flex-col gap-5 pb-2 border-b">
         <label className="poppins-medium text-[20px]">{label}</label>
         <input
+          type="text"
           className="outline-none"
           name={name}
           placeholder={placeholder}

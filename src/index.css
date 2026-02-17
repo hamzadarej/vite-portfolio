@@ -22,7 +22,7 @@
 @theme {
   --spacing-28: 280px ;
   --spacing-24: 240px ;
---animate-fade: fadeRight 0.5s ease-out;
+  --animate-fade: fadeRight 0.5s ease-out;
 
   @keyframes fadeRight {
     0% {

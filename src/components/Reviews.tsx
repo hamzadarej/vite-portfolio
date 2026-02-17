@@ -5,21 +5,24 @@ import WaveBox from "../Layout/WaveBox";
 import avatarAnn from "../../public/avatarAnn.png";
 import avatarStaImage from "../../public/avatarSta.png";
 import avatarDaImage from "../../public/avatarda.svg";
+import { useTranslation } from "react-i18next";
 
 const Reviews = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <ChapterHeadline chapter={7} />
 
       <SubChapter
-        title="TESTIMONIALS"
-        subTitle="My Testimonials"
-        more="My Colleague Reviews"
+        title={t("reviews.title")}
+        subTitle={t("reviews.subTitle")}
+        more={t("reviews.more")}
       />
       <div className="w-full mb-[100px]">
         <SimpleSlider>
           {reviewList.map(({ name, position, review, img }) => (
-            <div key={name} className="px-[12px] overflow-hidden">
+            <div key={name + position} className="px-[12px] overflow-hidden">
               <div className="bg-flex max-h-[500px] min-h-[500px]  p-[20px] border-1 border-black">
                 <div className="relative w-fit">
                   <WaveBox>
@@ -43,6 +46,7 @@ const Reviews = () => {
     </>
   );
 };
+
 const reviewList = [
   {
     img: avatarStaImage,
@@ -86,7 +90,6 @@ const reviewList = [
     review:
       "Im Flugprojekt kennst Du Dich sehr gut aus und kannst dort auch mit allen relevanten Details umgehen.",
   },
-
   {
     img: avatarDaImage,
     name: "Da***",
@@ -100,7 +103,6 @@ const reviewList = [
     review:
       'Du hast Spaß daran, immer möglichst viel "Output" zu liefern und somit das Team zügig voran zu bringen bzw. schnell Ergebnisse zu liefern.',
   },
-  //Goal-oriented communication and cooperation
   {
     img: avatarStaImage,
     name: "St***",

@@ -1,5 +1,6 @@
 import { cn } from "../utility/cn";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Nav = ({
   onClick,
@@ -12,6 +13,7 @@ const Nav = ({
   currentPage: number;
   theme: string;
 }) => {
+  const { t } = useTranslation();
   const navbarRef = useRef<HTMLDivElement | null>(null);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -44,7 +46,7 @@ const Nav = ({
         "bg-inherit transition-all duration-300 z-10 fixed top-0 px-[12px] flex justify-between w-full items-center no-scrollbar overflow-hidden",
         {
           "bg-inherit": !showNavList,
-        },
+        }
       )}
     >
       {/*top left*/}
@@ -57,7 +59,7 @@ const Nav = ({
         <span className="font-bold text-[30px]">
           <img src="/logo-nav.png" alt="portfolioLogo" className="size-16" />
         </span>
-        <span className="poppins-semibold">Frontend Fusion</span>
+        <span className="poppins-semibold">{t("nav.frontendFusion")}</span>
       </div>
 
       <button
@@ -66,7 +68,7 @@ const Nav = ({
           "relative h-[36px] w-[36px] [&>span]:w-[36px] [&>span]:h-[2px] mx-[4px] [&>span]:bg-[#000000] justify-center flex flex-col space-y-2",
           {
             "[&>span]:bg-[#fff]": showNavList && theme === "dark",
-          },
+          }
         )}
       >
         <span
@@ -96,16 +98,7 @@ const Nav = ({
 };
 
 export default Nav;
-const list = [
-  "01 TOP",
-  "02 ABOUT ME",
-  "03 MY SERVICES",
-  "04 SKILL",
-  "05 EXPERIENCES",
-  "06 PROJECTS",
-  "07 HOW I WORK",
-  "08 CONTACT",
-];
+
 export const NavList = ({
   currentPage,
   showNavList,
@@ -117,34 +110,47 @@ export const NavList = ({
   onClick?: () => void;
   isDesktop?: boolean;
 }) => {
+  const { t } = useTranslation();
+
+  const navItems = [
+    { key: "nav.top", tab: 1 },
+    { key: "nav.aboutMe", tab: 2 },
+    { key: "nav.myServices", tab: 3 },
+    { key: "nav.skills", tab: 4 },
+    { key: "nav.experiences", tab: 5 },
+    { key: "nav.projects", tab: 6 },
+    { key: "nav.howIWork", tab: 7 },
+    { key: "nav.contact", tab: 8 },
+  ];
+
   return (
     <div
       className={cn(
         "p-5 fixed bg-inherit h-full w-28 overflow-x-scroll no-scrollbar transition-transform duration-500",
         {
           "inset-0": !isDesktop,
-          "right-0 h-fit bottom-0 top-0 my-auto": isDesktop,
-        },
+          "right-0 h-[80%] bottom-0 top-0 my-auto": isDesktop,
+        }
       )}
       style={{
         transform: !showNavList ? "translateX(-100%)" : "translateX(0)",
       }}
     >
       <ul className="mt-6 poppins-medium h-full border-l-2 border-black/50 text-[16px]  gap-2 flex flex-col">
-        {list.map((item, index) => (
+        {navItems.map((item, index) => (
           <a
             onClick={() => {
               onClick?.();
             }}
-            href={"#tab_" + (index + 1)}
-            key={item}
+            href={"#tab_" + item.tab}
+            key={item.key}
             className={cn("w-24 -ml-[2px] h-11 z-9 flex items-center pl-8", {
               "border-l-2 border-l-black relative overflow-hidden":
                 currentPage === index,
               "hover:bg-black/15": currentPage !== index,
             })}
           >
-            {item}
+            {t(item.key)}
             {currentPage === index && (
               <span className="bg-black/15 block absolute inset-0 w-full animate-fade" />
             )}

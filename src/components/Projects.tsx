@@ -4,7 +4,11 @@ import { ReactNode } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { cn } from "../utility/cn";
 import { isMobile } from "../utility/device";
+import { useTranslation } from "react-i18next";
+
 const Projects = () => {
+  const { t } = useTranslation();
+
   const Card = ({ children, href }: { children: ReactNode; href: string }) => (
     <a
       href={href}
@@ -16,7 +20,7 @@ const Projects = () => {
           "border absolute inset-0 group-hover:-rotate-3 transition-all duration-500 ease-in-out",
           {
             "-rotate-3": isMobile,
-          },
+          }
         )}
       />
       <div
@@ -24,7 +28,7 @@ const Projects = () => {
           "absolute inset-0 border group-hover:rotate-3 transition-all duration-500 ease-in-out",
           {
             "rotate-3": isMobile,
-          },
+          }
         )}
       />
       <div
@@ -35,7 +39,7 @@ const Projects = () => {
           "h-full absolute inset-0 w-full border group-hover:scale-[98%] transition-all duration-500 ease-in-out flex items-center justify-center flex-col",
           {
             "scale-[98%]": isMobile,
-          },
+          }
         )}
       >
         {children}
@@ -46,7 +50,7 @@ const Projects = () => {
           "absolute scale-0 group-hover:scale-100 transition-all duration-500 ease-in-out inset-0 flex items-center justify-center",
           {
             "scale-100": isMobile,
-          },
+          }
         )}
       >
         <div className="border border-solid rounded-full">
@@ -68,22 +72,22 @@ const Projects = () => {
       href: "https://flower-shop-jet-beta.vercel.app/",
       imgSrc: "/flower1.png",
       alt: "flower-shop-image",
-      title: "Bloom & Blossom",
-      subTitle: "E-commerce Platform",
+      titleKey: "projects.bloomBlossom.title",
+      subTitleKey: "projects.bloomBlossom.subTitle",
     },
     {
       href: "https://vite-weather-mkuyi20fr-hamzadarejs-projects.vercel.app/",
       imgSrc: "/weather.png",
       alt: "weather-app-image",
-      title: "Weather App",
-      subTitle: "information website",
+      titleKey: "projects.weatherApp.title",
+      subTitleKey: "projects.weatherApp.subTitle",
     },
     {
       href: "https://habit-tracker-app-swart.vercel.app/",
       imgSrc: "/habit-app-image.png",
       alt: "habit-app-image",
-      title: "Habit Tracker",
-      subTitle: "Lifestyle website",
+      titleKey: "projects.habitTracker.title",
+      subTitleKey: "projects.habitTracker.subTitle",
     },
   ];
 
@@ -91,19 +95,19 @@ const Projects = () => {
     <>
       <ChapterHeadline chapter={6} />
       <SubChapter
-        title="PROJECTS"
-        subTitle="Some of My Most Privat Projects"
-        more="My Featured Projects"
+        title={t("projects.title")}
+        subTitle={t("projects.subTitle")}
+        more={t("projects.more")}
       />
       <div className="w-full px-2 mt-15 mb-8 grid gap-10 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
-        {projectList.map(({ href, imgSrc, alt, title, subTitle }) => (
+        {projectList.map(({ href, imgSrc, alt, titleKey, subTitleKey }) => (
           <div key={alt} className="flex flex-col">
             <Card href={href}>
               <img src={imgSrc} alt={alt} className="h-full w-full" />
             </Card>
             <span className="text-[16px] poppins-regular">
-              <p className="poppins-bold text-3xl pb-1">{title}</p>
-              <p>{subTitle}</p>
+              <p className="poppins-bold text-3xl pb-1">{t(titleKey)}</p>
+              <p>{t(subTitleKey)}</p>
             </span>
           </div>
         ))}
@@ -111,4 +115,5 @@ const Projects = () => {
     </>
   );
 };
+
 export default Projects;

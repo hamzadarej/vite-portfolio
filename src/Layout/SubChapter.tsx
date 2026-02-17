@@ -11,20 +11,6 @@ const SubChapter = ({
   more?: string;
   addStyle?: string;
 }) => {
-  // const contentRef = useRef<HTMLDivElement>(null);
-  // const containerOffsetTop = contentRef?.current?.offsetTop ?? 0;
-  // const [isViewDown, setIsViewDown] = useState(false);
-  //
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const isViewed = window?.pageYOffset > containerOffsetTop + 500;
-  //     setIsViewDown((prev) => (prev !== isViewed ? isViewed : prev));
-  //   };
-  //   globalThis.window.addEventListener("scroll", handleScroll);
-  //
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
   return (
     <div className="relative mt-[60px] mb-[20px] pt-[24px] pb-[20px] flex-col flex pl-[32px] border-l-2 ">
       <span

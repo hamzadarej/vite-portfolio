@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "top": "01 TOP",
+    "aboutMe": "02 ABOUT ME",
+    "myServices": "03 MY SERVICES",
+    "skills": "04 SKILL",
+    "experiences": "05 EXPERIENCES",
+    "projects": "06 PROJECTS",
+    "howIWork": "07 HOW I WORK",
+    "contact": "08 CONTACT",
+    "frontendFusion": "Frontend Fusion"
+  },
+  "home": {
+    "greeting": "HI, I AM A DEVELOPER",
+    "hi": "HI,",
+    "iAmA": "I AM A",
+    "developer": "DEVELOPER",
+    "frontend": "Frontend",
+    "react": "React Expert",
+    "basedIn": "based in Leipzig, Germany.",
+    "viewMyWork": "View My Work",
+    "contactMe": "Contact Me"
+  },
+  "aboutMe": {
+    "title": "ABOUT ME",
+    "subTitle": "Some Word About Me",
+    "more": "Know Me More",
+    "intro": "I'm Hamza Darej, a WEB Developer",
+    "description1": "I'm a Frontend Developer with a passion for creating clean, responsive, and engaging web interfaces. I specialize in turning design ideas into interactive, high-performance websites and web applications using modern tools and technologies like HTML, CSS, JavaScript, React, and Tailwind CSS.",
+    "description2": "I focus on writing clean, maintainable code and building user-centered experiences that work seamlessly across devices and browsers. With a strong eye for detail and a love for UI/UX, I enjoy collaborating with designers and backend developers to bring projects to life.",
+    "email": "Email:",
+    "dateOfBirth": "Date of Birth:",
+    "dateOfBirthValue": "17 September, 1993",
+    "address": "Address",
+    "addressValue": "Germany, Leipzig",
+    "yearsExperience": "Years of experience"
+  },
+  "services": {
+    "title": "MY SERVICES",
+    "subTitle": "How I can Help Your Next Project",
+    "more": "What I Do",
+    "list": {
+      "responsiveWebDesign": "Responsive Web Design",
+      "modernTechStack": "Modern Tech Stack",
+      "pixelPerfectUI": "Pixel-perfect UI Implementation",
+      "componentBasedArch": "Component-based Architecture",
+      "performanceOptimization": "Performance Optimization",
+      "crossBrowserCompatibility": "Cross-browser Compatibility",
+      "versionControl": "Version Control & Collaboration"
+    }
+  },
+  "skills": {
+    "title": "ATTAINMENTS",
+    "subTitle": "Highlight My Expertise in:",
+    "devSkills": "Developer Skills",
+    "langSkills": "Language Skills",
+    "frontEnd": "Front-End Development",
+    "backEnd": "Back-End Development",
+    "fullStack": "Full-Stack Development",
+    "database": "Database Management",
+    "versionControl": "Version Control",
+    "apiIntegration": "Front-End API Integration",
+    "german": "German",
+    "english": "English",
+    "french": "French"
+  },
+  "experience": {
+    "title": "EXPERIANCES",
+    "subTitle": "Highlight My Key Experiences",
+    "more": "My Experience",
+    "cv": "CV",
+    "positions": {
+      "senior": {
+        "duration": "(2025 - Present)",
+        "position": "Senior Developer at CHECK24 Travel:",
+        "desc": "Support the development of a new team-creation web app (WebView) for IOS and Android, leveraging the Remix framework for efficient server-side API calls."
+      },
+      "professional": {
+        "duration": "(2024 - 2025)",
+        "position": "Professional Developer at CHECK24 Flight:",
+        "desc": "Develop a CMS-powered static flight landing page with pre-fetched search results, optimized for Search Engine Advertising. Elevate our project with modern tools like TanStack and Tailwind, while mentoring new trainees by sharing ideas and conducting code reviews."
+      },
+      "junior": {
+        "duration": "(2022 - 2024)",
+        "position": "Junior Developer at CHECK24 Flight:",
+        "desc": "Developed responsive and interactive front-end Web App using JS framework React: HTML, CSS, and JavaScript. Collaborated closely with designers to implement visually appealing and user-friendly websites."
+      }
+    }
+  },
+  "projects": {
+    "title": "PROJECTS",
+    "subTitle": "Some of My Most Private Projects",
+    "more": "My Featured Projects",
+    "bloomBlossom": {
+      "title": "Bloom & Blossom",
+      "subTitle": "E-commerce Platform"
+    },
+    "weatherApp": {
+      "title": "Weather App",
+      "subTitle": "Information website"
+    },
+    "habitTracker": {
+      "title": "Habit Tracker",
+      "subTitle": "Lifestyle website"
+    }
+  },
+  "reviews": {
+    "title": "TESTIMONIALS",
+    "subTitle": "My Testimonials",
+    "more": "My Colleague Reviews"
+  },
+  "contact": {
+    "title": "CONTACT",
+    "subTitle": "Let's get in Touch",
+    "more": "Contact Me",
+    "leaveMessage": "Leave a Message",
+    "successMessage": "Many thanks for your message — I'll be in touch with you shortly!",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "Your e-mail",
+    "message": "Message",
+    "messagePlaceholder": "Your message",
+    "submit": "Submit",
+    "submitting": "submitting"
+  },
+  "common": {
+    "nextChapter": "Next Chapter"
+  }
+}
