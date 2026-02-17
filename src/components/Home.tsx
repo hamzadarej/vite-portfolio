@@ -16,9 +16,9 @@ const Home = () => {
   return (
     <div
       id="tab_1"
-      className="space-y-12 h-screen mt-14 lg:mt-0 lg:items-center lg:flex overflow-hidden"
+      className="space-y-12 h-screen mt-14 lg:mt-0 md:items-center md:flex overflow-hidden"
     >
-      <section className="py-[60px] poppins-medium min-w-1/3">
+      <section className="py-[60px] poppins-medium min-w-[500px]">
         <h4 className="text-[22px] lg:text-[40px] tracking-tight fade-text whitespace-nowrap">
           <span>{t("home.hi")} </span>
           <span>{t("home.iAmA")} </span>
@@ -37,7 +37,7 @@ const Home = () => {
         <p className="fade-text text-[22px] mt-[12px] tracking-[-1px]">
           {t("home.basedIn")}
         </p>
-        <div className="pt-12 space-x-6">
+        <div className="pt-12 lg:space-x-6 space-x-2">
           <button
             onClick={() => {
               scrollToEl("#tab_6");
@@ -59,7 +59,7 @@ const Home = () => {
           <WaveBox extraClass="waveRunFour">
             <img
               src={homeImg}
-              className="size-[350px] rounded-full border-2"
+              className="size-[320px] rounded-full border-2"
               alt="logo"
             />
           </WaveBox>
