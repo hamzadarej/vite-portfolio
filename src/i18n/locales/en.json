@@ -72,18 +72,26 @@
     "positions": {
       "senior": {
         "duration": "(2025 - Present)",
-        "position": "Senior Developer at CHECK24 Travel:",
-        "desc": "Support the development of a new team-creation web app (WebView) for IOS and Android, leveraging the Remix framework for efficient server-side API calls."
+        "position": "Senior Frontend Engineer at CHECK24 Travel",
+        "desc": "Promoted to Senior Frontend Engineer, overseeing architecture, development, and deployment of a WebView-based mobile application (iOS & Android), with focus on performance, scalability, and stability."
       },
+
+      "professional-mission": {
+        "duration": "(2025)",
+        "position": "Frontend Engineer at CHECK24 Travel",
+        "desc": "Developed a new team-creation WebView app for iOS and Android, using the Remix framework for efficient server-side API calls and seamless user experience."
+      },
+
       "professional": {
         "duration": "(2024 - 2025)",
-        "position": "Professional Developer at CHECK24 Flight:",
-        "desc": "Develop a CMS-powered static flight landing page with pre-fetched search results, optimized for Search Engine Advertising. Elevate our project with modern tools like TanStack and Tailwind, while mentoring new trainees by sharing ideas and conducting code reviews."
+        "position": "Frontend Engineer at CHECK24 Flight",
+        "desc": "Built a CMS-powered static flight landing page with pre-fetched search results optimized for Search Engine Advertising. Leveraged modern tools like TanStack and Tailwind, and mentored new trainees through code reviews and knowledge sharing."
       },
+
       "junior": {
         "duration": "(2022 - 2024)",
-        "position": "Junior Developer at CHECK24 Flight:",
-        "desc": "Developed responsive and interactive front-end Web App using JS framework React: HTML, CSS, and JavaScript. Collaborated closely with designers to implement visually appealing and user-friendly websites."
+        "position": "Junior Frontend Engineer at CHECK24 Flight",
+        "desc": "Developed responsive and interactive front-end web apps using React, HTML, CSS, and JavaScript. Collaborated with designers to implement visually appealing, user-friendly interfaces."
       }
     }
   },

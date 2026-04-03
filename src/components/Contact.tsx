@@ -3,7 +3,6 @@ import SubChapter from "../Layout/SubChapter";
 import { FiPhoneCall } from "react-icons/fi";
 import { PiEnvelopeOpenLight } from "react-icons/pi";
 import { SlLocationPin } from "react-icons/sl";
-import { PiFacebookLogoLight } from "react-icons/pi";
 import { PiLinkedinLogoLight } from "react-icons/pi";
 import { useForm, ValidationError } from "@formspree/react";
 import { PiGithubLogoLight } from "react-icons/pi";
@@ -45,10 +44,6 @@ const Contact = () => {
       </div>
       <div className="flex space-x-[16px] mb-[60px]">
         {[
-          {
-            icon: <PiFacebookLogoLight />,
-            link: "https://www.facebook.com/hamza.darej",
-          },
           {
             icon: <PiLinkedinLogoLight />,
             link: "https://www.linkedin.com/in/hamza-darej-068365210",

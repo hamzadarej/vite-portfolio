@@ -6,7 +6,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { InView } from "react-intersection-observer";
 import { cn } from "./utility/cn";
 import Projects from "./components/Projects";
@@ -24,6 +24,20 @@ function App() {
   const isDesktop = useDevice();
   const [showNavList, setShowNavList] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "de" : "en";
@@ -47,13 +61,27 @@ function App() {
     <div
       data-theme={theme}
       className={cn(
-        "xl:px-20 overflow-y-scroll relative no-scrollbar h-full flex flex-col justify-start items-start"
+        "xl:px-20 overflow-y-scroll relative no-scrollbar h-full flex flex-col justify-start items-start",
       )}
       style={{
         background: "var(--background)",
       }}
     >
       <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
+        <button
+          type="button"
+          onClick={scrollToTop}
+          className={cn(
+            "p-2 rounded border-solid text-[var(--text)] shadow-xl border-2 border-white/20 bg-white/20 backdrop-blur-md hover:bg-white/30 transition-all duration-300",
+            {
+              "opacity-100 translate-y-0": showScrollTop,
+              "opacity-0 translate-y-4 pointer-events-none": !showScrollTop,
+            },
+          )}
+          aria-label="Scroll to top"
+        >
+          ↑
+        </button>
         <button
           type="button"
           onClick={toggleLanguage}
@@ -112,7 +140,7 @@ function App() {
       <div
         onClick={() => setShowNavList(false)}
         className={cn(
-          "fixed inset-0 w-full h-full transition-transform duration-1000 ease-in-out bg-black/25"
+          "fixed inset-0 w-full h-full transition-transform duration-1000 ease-in-out bg-black/25",
         )}
         style={{
           transform: showNavList ? "translateX(0)" : "translateX(100%)",

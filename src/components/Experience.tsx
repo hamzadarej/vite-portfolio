@@ -7,7 +7,12 @@ import { useTranslation } from "react-i18next";
 const Experience = () => {
   const { t } = useTranslation();
 
-  const experienceKeys = ["senior", "professional", "junior"] as const;
+  const experienceKeys = [
+    "senior",
+    "professional-mission",
+    "professional",
+    "junior",
+  ] as const;
 
   return (
     <>
@@ -19,10 +24,7 @@ const Experience = () => {
       />
       <ul className="border-l-2 border-black/50  my-[70px] space-y-[60px]">
         {experienceKeys.map((key) => (
-          <li
-            key={key}
-            className="pl-[32px] border-l-2 -ml-[2px]"
-          >
+          <li key={key} className="pl-[32px] border-l-2 -ml-[2px]">
             <span>{t(`experience.positions.${key}.duration`)}</span>
             <h2 className="poppins-semibold text-[20px] mb-[16px]">
               {t(`experience.positions.${key}.position`)}

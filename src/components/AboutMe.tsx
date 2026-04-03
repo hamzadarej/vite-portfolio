@@ -41,7 +41,7 @@ const AboutMe = () => {
             <div className="absolute inset-0 border rotate-3" />
             <div
               style={{
-                background: "var(--background)",
+                background: "var(--bg-solid)",
               }}
               className=" h-full absolute inset-0 w-full border flex items-center justify-center flex-col"
             >

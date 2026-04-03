@@ -71,19 +71,24 @@
     "cv": "CV",
     "positions": {
       "senior": {
-        "duration": "(2025 - Heute)",
-        "position": "Senior-Entwickler bei CHECK24 Travel:",
-        "desc": "Unterstützung bei der Entwicklung einer neuen Team-Erstellungs-Web-App (WebView) für iOS und Android unter Verwendung des Remix-Frameworks für effiziente serverseitige API-Aufrufe."
+        "duration": "(2026 - heute)",
+        "position": "Senior Software Engineer bei CHECK24 Flug:",
+        "desc": "Beförderung zum Senior Software Engineer und Übernahme der technischen Leitung eines WebView-basierten Mobile-App-Projekts (iOS & Android) mit Verantwortung für Architektur, Entwicklung sowie Deployment und Fokus auf Performance und Stabilität."
+      },
+      "professional-mission": {
+        "duration": "(2025)",
+        "position": "Frontend Engineer (Projektrotation) bei CHECK24 Reise:",
+        "desc": "Entwicklung einer WebView-basierten Anwendung von Grund auf (Greenfield) mit React und Remix, inklusive Architekturaufbau und effizienter API-Integration."
       },
       "professional": {
         "duration": "(2024 - 2025)",
-        "position": "Professioneller Entwickler bei CHECK24 Flight:",
-        "desc": "Entwicklung einer CMS-gesteuerten statischen Flug-Landingpage mit vorab abgerufenen Suchergebnissen, optimiert für Suchmaschinenwerbung. Verbesserung unseres Projekts mit modernen Tools wie TanStack und Tailwind, während neue Auszubildende durch Ideenaustausch und Code-Reviews betreut werden."
+        "position": "Frontend Engineer (Professional) bei CHECK24 Flug:",
+        "desc": "Weiterentwicklung einer performanten, CMS-gestützten Flug-Landingpage mit Fokus auf SEA-Optimierung, Einsatz moderner Tools wie TanStack und Tailwind sowie Mentoring und Code-Reviews im Team."
       },
       "junior": {
         "duration": "(2022 - 2024)",
-        "position": "Junior-Entwickler bei CHECK24 Flight:",
-        "desc": "Entwicklung responsiver und interaktiver Front-End-Web-Apps mit dem JS-Framework React: HTML, CSS und JavaScript. Enge Zusammenarbeit mit Designern zur Implementierung optisch ansprechender und benutzerfreundlicher Websites."
+        "position": "Frontend Engineer (Junior) bei CHECK24 Flug:",
+        "desc": "Entwicklung responsiver Webanwendungen mit React sowie enge Zusammenarbeit mit Design-Teams zur Umsetzung moderner und benutzerfreundlicher UI/UX-Konzepte."
       }
     }
   },
