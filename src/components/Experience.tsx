@@ -1,7 +1,7 @@
 import ChapterHeadline from "../Layout/ChapterHeadline";
 import SubChapter from "../Layout/SubChapter";
 import WaveBox from "../Layout/WaveBox";
-import CV from "../../public/Lebenslauf-2025.pdf";
+import CV from "../../public/cv_2026.pdf";
 import { useTranslation } from "react-i18next";
 
 const Experience = () => {
